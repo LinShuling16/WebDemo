@@ -10,9 +10,10 @@
 	}
 	a{
 		text-decoration:none;
+		outline: none;
 	}
 	li{
-		list-style-type:none;
+		list-style-type:none;/*去除li的默认样式，小圆点。*/
 	}
 	body{
 		background-color: #eee;
@@ -27,11 +28,12 @@
 		color:#333;
 	}
 	#face-btn:hover{
-		background-position: 0 -26px;
+		background-position: 0 -26px;/*定位背景图像 0：水平方向不改变，-26px:向上26px*/
 	}
 	.panel {
 		width: 390px;
 		padding:2px;
+		display: none;/*panel 最初不显示*/
 		border:1px solid #ccc;
 		background-color:#fff;
 	}
@@ -141,5 +143,45 @@
 		</div>
 		
 	</div>
+	<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="js/preload.js"></script>
+	<script type="text/javascript">
+		var $btn = $("#face-btn"),
+			$panel = $(".panel");
+
+		var imgs = [];
+		for (var i = 0; i < 75; i++ ){
+			imgs[i] = "faces/qq/" + (i + 1) + ".gif";
+		}
+
+		var len = imgs.length;
+
+		$btn.on("click",function(e){
+			e.stopPropagation();/*禁止事件冒泡*/
+			$panel.show();
+
+			$.preload(imgs,{
+				all:function(){
+					var html = '';
+					html += '<ul class="list">';
+
+					for(var i = 0; i < len; i++){
+						html +='<li><img src="'+imgs[i]+'"></li>';
+					}
+
+					html+='</ul>';
+
+					setTimeout( function () {
+						$panel.html(html);
+					},1000);/*这里为了演示效果加了1s的延时*/
+					
+				}
+			});
+		});
+
+		$(document).on("click",function(){/*点击浏览器空白处，收起panel，注意这里事件冒泡。*/
+			$panel.hide();
+		})
+	</script>
 </body>
 </html>
