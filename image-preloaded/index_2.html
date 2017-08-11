@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>图片预加载-无序加载-qq表情</title>
+<style type="text/css">
+	body,p,ul,li{
+		padding:0;
+		margin:0;
+	}
+	a{
+		text-decoration:none;
+	}
+	li{
+		list-style-type:none;
+	}
+	body{
+		background-color: #eee;
+	}
+	.box{
+		margin: 150px 0 0 200px;
+	}
+	#face-btn{
+		display: block;
+		background: url(img/icon.gif) no-repeat 0 4px;
+		text-indent: 20px;/*首行文本缩进*/
+		color:#333;
+	}
+	#face-btn:hover{
+		background-position: 0 -26px;
+	}
+	.panel {
+		width: 390px;
+		padding:2px;
+		border:1px solid #ccc;
+		background-color:#fff;
+	}
+	.loading{
+		text-align:center;
+	}
+	.list li{
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		border:1px solid #fff;
+		margin-bottom: 5px;
+		cursor: pointer;
+	}
+	.list li:hover{
+		border-color:#06c;
+	}
+</style>
+</head>
+<body>
+	<div class="box">
+		<a href="javascript:;" id="face-btn">表情</a>
+		<div class="panel">
+			<p class="loading">表情加载中，请稍后...</p>
+			<!-- <ul class="list">
+				<li><img src="faces/qq/1.gif"></li>
+				<li><img src="faces/qq/2.gif"></li>
+				<li><img src="faces/qq/3.gif"></li>
+				<li><img src="faces/qq/4.gif"></li>
+				<li><img src="faces/qq/5.gif"></li>
+				<li><img src="faces/qq/6.gif"></li>
+				<li><img src="faces/qq/7.gif"></li>
+				<li><img src="faces/qq/8.gif"></li>	
+				<li><img src="faces/qq/9.gif"></li>
+				<li><img src="faces/qq/10.gif"></li>
+				<li><img src="faces/qq/11.gif"></li>
+				<li><img src="faces/qq/12.gif"></li>
+				<li><img src="faces/qq/13.gif"></li>
+				<li><img src="faces/qq/14.gif"></li>
+				<li><img src="faces/qq/15.gif"></li>
+				<li><img src="faces/qq/16.gif"></li>
+				<li><img src="faces/qq/17.gif"></li>
+				<li><img src="faces/qq/18.gif"></li>
+				<li><img src="faces/qq/19.gif"></li>
+				<li><img src="faces/qq/20.gif"></li>
+				<li><img src="faces/qq/21.gif"></li>
+				<li><img src="faces/qq/22.gif"></li>
+				<li><img src="faces/qq/23.gif"></li>
+				<li><img src="faces/qq/24.gif"></li>
+				<li><img src="faces/qq/25.gif"></li>
+				<li><img src="faces/qq/26.gif"></li>
+				<li><img src="faces/qq/27.gif"></li>
+				<li><img src="faces/qq/28.gif"></li>	
+				<li><img src="faces/qq/29.gif"></li>
+				<li><img src="faces/qq/30.gif"></li>
+				<li><img src="faces/qq/31.gif"></li>
+				<li><img src="faces/qq/32.gif"></li>
+				<li><img src="faces/qq/33.gif"></li>
+				<li><img src="faces/qq/34.gif"></li>
+				<li><img src="faces/qq/35.gif"></li>
+				<li><img src="faces/qq/36.gif"></li>
+				<li><img src="faces/qq/37.gif"></li>
+				<li><img src="faces/qq/38.gif"></li>
+				<li><img src="faces/qq/39.gif"></li>
+				<li><img src="faces/qq/40.gif"></li>
+				<li><img src="faces/qq/41.gif"></li>
+				<li><img src="faces/qq/42.gif"></li>
+				<li><img src="faces/qq/43.gif"></li>
+				<li><img src="faces/qq/44.gif"></li>
+				<li><img src="faces/qq/45.gif"></li>
+				<li><img src="faces/qq/46.gif"></li>
+				<li><img src="faces/qq/47.gif"></li>
+				<li><img src="faces/qq/48.gif"></li>	
+				<li><img src="faces/qq/49.gif"></li>
+				<li><img src="faces/qq/50.gif"></li>
+				<li><img src="faces/qq/51.gif"></li>
+				<li><img src="faces/qq/52.gif"></li>
+				<li><img src="faces/qq/53.gif"></li>
+				<li><img src="faces/qq/54.gif"></li>
+				<li><img src="faces/qq/55.gif"></li>
+				<li><img src="faces/qq/56.gif"></li>
+				<li><img src="faces/qq/57.gif"></li>
+				<li><img src="faces/qq/58.gif"></li>
+				<li><img src="faces/qq/59.gif"></li>
+				<li><img src="faces/qq/60.gif"></li>
+				<li><img src="faces/qq/61.gif"></li>
+				<li><img src="faces/qq/62.gif"></li>
+				<li><img src="faces/qq/63.gif"></li>
+				<li><img src="faces/qq/64.gif"></li>
+				<li><img src="faces/qq/65.gif"></li>
+				<li><img src="faces/qq/66.gif"></li>
+				<li><img src="faces/qq/67.gif"></li>
+				<li><img src="faces/qq/68.gif"></li>	
+				<li><img src="faces/qq/69.gif"></li>
+				<li><img src="faces/qq/70.gif"></li>
+				<li><img src="faces/qq/71.gif"></li>
+				<li><img src="faces/qq/72.gif"></li>
+				<li><img src="faces/qq/73.gif"></li>
+				<li><img src="faces/qq/74.gif"></li>
+				<li><img src="faces/qq/75.gif"></li>
+				<li><img src="faces/qq/76.gif"></li>
+				<li><img src="faces/qq/77.gif"></li>
+				<li><img src="faces/qq/78.gif"></li>
+				<li><img src="faces/qq/79.gif"></li>
+				<li><img src="faces/qq/80.gif"></li>									
+			</ul> -->
+		</div>
+		
+	</div>
+</body>
+</html>
