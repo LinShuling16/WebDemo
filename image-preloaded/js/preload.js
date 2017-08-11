@@ -6,16 +6,45 @@
         this.imgs = (typeof imgs === 'string') ? [imgs] : imgs;
         this.opts = $.extend({}, preLoad.DEFAULTS, options);
 
-        this._unordered();
+        // this._unordered();
+        if(this.opts.order === 'ordered'){
+            this._ordered();
+        }else{
+            this._unordered();
+        }
     }
 
     preLoad.DEFAULTS = {
+        order:'unordered',//无序预加载
         each: null,  // 每一张图片加载完毕后执行
-        all: null,   // 所有图片加载完后执行
+        all: null  // 所有图片加载完后执行
     }
+    preLoad.prototype._ordered = function (){//有序加载    
+        var opts = this.opts,
+            imgs = this.imgs,
+            len = imgs.length,
+            count = 0;
 
-    preLoad.prototype._unordered = function () {
-        //无序加载
+        load();
+        function load(){
+            var imgObj = new Image();
+
+            $(imgObj).on('load error',function(){
+                opts.each && opts.each(count);
+                if(count >= len){
+                    //所有图片加载完毕
+                    opts.all && opts.all();
+                }else{
+                    load();
+                }
+                count++;
+            });
+            imgObj.src=imgs[count];
+        }
+
+    },
+
+    preLoad.prototype._unordered = function () {//无序加载        
         var imgs = this.imgs,
             opts = this.opts,
             count = 0,
