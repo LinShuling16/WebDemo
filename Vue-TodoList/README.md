@@ -4,7 +4,7 @@
 - Hello.vue 第25行 的Stroe.fetch()功能未实现
 - 项目开发中注意 this 的使用。
 
-> A Vue.js project
+
 
 ## Build Setup
 
