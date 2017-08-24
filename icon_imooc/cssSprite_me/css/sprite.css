@@ -1,0 +1,38 @@
+.sprite{
+	width: 206px;
+	margin: 160px auto;
+	border: 1px solid #b51600;
+}
+.sprite li{
+	cursor: pointer;/*光标：手型*/
+	width: 206px;
+	height: 42px;
+	background-color: #b51600;
+	border-bottom: 1px solid #911001;
+	border-top: 1px solid #c11e08;
+}
+.sprite li a {
+	color: #fff;
+	line-height: 42px;
+	font-size: 14px;
+}
+
+.sprite li i{
+	height: 40px;/*注意这里的height和width是每个icon的height和width*/
+	width: 24px;
+	display: block;
+	margin-left: 10px;
+	margin-right: 8px;
+	float: left;
+	background-image: url("../images/s-icon.png");
+}
+.sprite li:hover{
+	background-color: #fff;
+	border-color: #fff
+}
+.sprite li:hover a{
+	color: #b51600;
+}
+.sprite li:hover s{
+
+}
