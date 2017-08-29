@@ -1,0 +1,107 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	display: block;
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.clear{
+	clear:both;
+}
+.menu ul{
+	position: absolute;
+	height: 24px;
+	width: 480px;
+	right: 20px;
+	margin-top:20px;
+}
+.item a,.more_p a{
+	line-height: 24px;
+	float: left;
+	color: #333;
+	font-size:13px;
+	font-weight: 700;
+	margin-left: 20px;
+	text-decoration: underline;
+}
+.item a:hover{
+	color: #38f;
+}
+.more_p a{
+	color: #fff;
+	background-color: #38f;
+	text-decoration: none;
+	padding:1px 3px;
+
+}
+.s_form_wrapper{
+	padding-top:140px;
+	text-align: center;
+}
+.s_form_wrapper .input{
+	height: 32px;
+}
+.s_form_wrapper img{
+	width: 280px;
+	height: 130px;
+	margin-bottom:26px;
+}
+.s_form_wrapper .input{
+	width: 540px;
+}
+.s_form_wrapper .submit{
+	height: 36px;
+	width: 100px;
+	line-height:36px;
+	color:#fff;
+	background-color:#3e71f3;
+	border:none;
+	margin-left: -6px;
+}
+.sodu_bottom{
+	background:url(../img/camera_new_5606e8f.png);
+	width: 18px;
+	height: 16px;
+	/*position:relative;*/
+	top:310px;
+	left: 1060px;
+}
+.sodu_bottom:hover{
+	cursor: pointer;/*光标：手型*/
+}
+.footer{
+	margin-top:400px;
+	text-align: center;
+}
+.footer a{
+	text-decoration: underline;
+}
+.ablout_baidu a,.pic a,.qr_code p ,span{
+	color:#666;
+	font-size: 13px;
+}
+.qr_code p
+{
+	font-weight: 700;
+}
+.ablout_baidu {
+	height: 22px;
+	width: 400px;
+	margin: 0 auto;
+	margin-top:20px;
+}
+.pic{
+	height: 24px;
+	width: 630px;
+	margin: 0 auto;
+}
+
+.ablout_baidu a,.pic a{
+	line-height: 22px;
+	float:left;
+	margin-right: 30px;
+}
