@@ -1,0 +1,211 @@
+@font-face{
+	font-family: "imooc-icon";
+	src:url("./fonts/icomoon.eot");/*IE9 的兼容模式*/
+	src:url("./fonts/icomoon.eot?#iefix") format("embedded-opentype"),
+		url("./fonts/icomoon.woff") format("woff"),
+		url("./fonts/icomoon.ttf") format("truetype"),
+		url("./fonts/icomoon.svg") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+.signin{
+	position: absolute;
+	margin: auto;
+	width: 400px;
+	height: 130px;
+	padding: 20px;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: .5em;
+	background-color: #ceecf6;
+	z-index: 1000;
+}
+.signin input{
+	margin: 8px;
+	width: 300px;
+	height: 30px;
+}
+#in{
+	width: 60px;
+	height: 30px;
+	background: #fff;
+}
+.modal_backrop{
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000;
+	z-index: 100;
+	opacity: .75;
+}
+
+.imooc-icon{
+	font-family: "imooc-icon";
+	font-weight: normal;
+	font-style:normal;
+	font-size:24px;
+	color: #a8b2b4;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+.search_icon{
+	position: relative;
+	left:20px;
+	top:10px;
+	font-size:16px;
+}
+.write_icon{
+	position: relative;
+	top:8px;
+	font-size:18px;
+}
+body{
+	background-color: #ceecf6;
+}
+.chatWindow{
+	width: 860px;
+	height: 660px;
+	margin:0 auto;
+	margin-top:140px;
+	background-color: #fff;
+}
+.chatWindow .left{
+	width: 280px;
+	height: inherit;
+	float: left;
+	background-color: #f2f8f8;
+}
+.chatWindow .left input{
+	width: inherit;
+	margin-left:20px;
+	height: 40px;
+	border:0px;
+	color: #77787a;
+	border-bottom: 1px solid #e1ebed;
+	background-color: #f2f8f8;
+}
+.search .signalLights{
+	padding-top: 8px;
+	padding-left: 15px;
+}
+/*.search .signalLights .lig{
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin-right: 6px;
+}*/
+.search .signalLights .red{
+	background-color: #fa5542;
+}
+.search .signalLights .yellow{
+	background-color: #ffcb1b;
+}
+.search .signalLights .green{
+	background-color: #4ff370;
+}
+.contactList .item{
+	height: 66px;
+	padding: 10px;
+	/*border-bottom: 1px solid #e1ebed;*/
+}
+.contactList .item:hover{
+	background-color: #e1ebed;
+	border-right: 5px solid #a1b5b6;
+}
+.contactList .item .avatar,.personal_infor .item .avatar{
+	padding: 4px;
+	float: left;
+}
+.contactList .item dt,.contactList .item .recentNews,.personal_infor .item dt,.personal_infor .item .recentNews{
+	padding-top:6px;
+	width: 180px;
+	float: right;
+
+}
+.contactList .item dt,.personal_infor .item dt{
+	font-size:20px;
+	color:#2f373a;
+}
+.contactList .item .recentNews,.personal_infor .item .recentNews{
+	font-size: 12px;
+	color: #a1b5b6;
+}
+.contactList .item .avatar,.right .personal_infor .avatar{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+.chatWindow .right{
+	position: relative;
+	width: 580px;
+	height: inherit;
+	float: left;
+	background-color: #fff;
+}
+.personal_infor .item{
+	float: left;
+	width: 260px;
+	padding: 8px; /*b170908*/
+}
+.personal_infor .icon{
+	float: right;
+	position: relative;
+	top: 32px;
+	right: 20px;
+}
+.personal_infor .imooc-icon{
+	margin-left: 10px;
+	padding: 8px;
+	border-radius: 50%;
+	border: 1px solid #a8b2b4;
+	font-size: 20px;
+}
+.personal_infor .imooc-icon:hover,.enter .imooc-icon:hover{
+	cursor: pointer;
+}
+.chatWindow .left .search,.chatWindow .right .personal_infor{
+	height: 86px;
+	border-bottom: 1px solid #e1ebed;
+}
+.chatArea{/*b170908*/
+	width: inherit;
+	height: 470px;
+	overflow-y:auto;
+	overflow-x:auto;
+}
+.chatArea p{/*b170908*/
+	margin: 20px;
+	padding: 10px; 
+	border-radius: 2em;
+	background-color: #ceecf6;
+
+}
+.chatWindow .right .enter{
+	position: absolute;
+	width: inherit;
+	background-color: #fff;/*b170908*/
+	height: 100px;
+	border-top:1px solid #e1ebed;
+	bottom: 0;
+}
+.enter .text{
+	height: inherit;
+	padding: 0px;/*b170908*/
+	width: 460px;
+	resize: none;
+	border: 0px;
+	font-size:16px;
+    color: #77787a;
+}
+.enter .icon{
+	position: relative;
+	top:-70%;
+	left: 82%;
+}
+.enter .icon .imooc-icon{
+	margin-right: 10px;
+}

@@ -1,0 +1,31 @@
+body,div,dd,dt,dl,ul,li,h1,h2,h3,h4,h5,h6,input,form,a,p,textarea,img,button{
+	margin: 0;
+	padding:0;
+}
+span,button{
+	display: inline-block;
+}
+
+ol,ul,li{
+	list-style:none;
+}
+
+a{
+	text-decoration:none;
+	display: block;
+	color: #fff;
+}
+img{
+	border:none;
+	display: block;
+}
+.clearfloat{
+	zoom:1; /*IE*/
+}
+.clearfloat:after{
+	display: block;
+	clear:both;
+	content: "";
+	visibility: hidden;
+	height: 0;
+}

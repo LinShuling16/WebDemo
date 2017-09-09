@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chat Room</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/chat.css">
+</head>
+<body>
+	<div class="signin">
+		<input type="text" name="" placeholder="请输入您的昵称...">
+		<input type="text" name="" placeholder="请输入联系人...">
+		<button type="button" id="in">登陆</button>
+	</div>
+	<div class="modal_backrop"></div>
+	<div class="chatWindow clearfloat">
+		<div class="left">
+			<div class="search">
+			    <div class="signalLights">
+			    	<span class="lig red"></span>
+			    	<span class="lig yellow"></span>
+			    	<span class="lig green"></span>
+			    </div>
+			    <i class="imooc-icon search_icon">&#xe986</i>
+				<input type="text" name="" placeholder="Find contact...">
+				<i class="imooc-icon write_icon">&#xe905</i>
+			</div>
+			<div class="contactList">
+				<dl class="item clearfloat">
+					<dt>Jack</dt>
+					<dd><img class="avatar" src="image/avatar.jpg"></dd>
+					<dd class="recentNews">hello world!</dd>
+				</dl>
+				<dl class="item clearfloat">
+					<dt>Jack</dt>
+					<dd><img class="avatar" src="image/avatar.jpg"></dd>
+					<dd class="recentNews">hello world!</dd>
+				</dl>
+				<dl class="item clearfloat">
+					<dt>Jack</dt>
+					<dd><img class="avatar" src="image/avatar.jpg"></dd>
+					<dd class="recentNews">hello world!</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="right clearfloat">
+			<div class="personal_infor clearfloat">
+				<dl class="item clearfloat">
+					<dt>Jack</dt>
+					<dd><img class="avatar" src="image/avatar.jpg"></dd>
+					<dd class="recentNews">hello world!</dd>
+				</dl>
+				<div class="icon">
+					<i class="imooc-icon">&#xe942</i>
+					<i class="imooc-icon">&#xeaa3</i>
+				</div>
+			</div>
+			<div class="chatArea" id="chat_area">
+				<!-- <p>
+					<span>name:</span>
+					<span>hello world!</span>
+				</p> -->
+			</div>
+			<div class="enter">
+				<textarea id="send_txt" class="text" placeholder="Type your message..."></textarea>
+				<div class="icon">
+					<i class="imooc-icon expression_icon">&#xe9e1</i>
+					<i class="imooc-icon send_icon" id="send_btn">&#xe949</i>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="js/chat.js"></script>
+</body>
+
+</html>
