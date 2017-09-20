@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cssborder</title>
+	<style>
+		*{
+			margin: 0;
+			padding:0;
+		}
+		.test1{
+			margin:20px;
+			width: 100px;
+			height: 100px;
+			border: thin solid #666;
+		}
+		.test2{
+			margin:20px;
+			width: 100px;
+			height: 100px;
+			border: medium solid #666;
+		}
+		.test3{
+			margin:20px;
+			width: 100px;
+			height: 100px;
+			border: thick solid #666;
+		}
+		.test4{
+			margin:20px;
+			width: 100px;
+			height: 100px;
+			border: 3px dashed #666;
+		}
+		.test5{
+			margin:20px;
+			width: 100px;
+			height: 100px;
+			border: 3px dotted #666;
+		}
+		.test6{
+			margin:20px;
+			width: 100px;
+			height: 100px;
+			border: 3px double #666;/*双线风格至少要三3px才能出效果*/
+		}
+		.more{
+			width: 120px;
+			height: 20px;
+			border-top:60px double;/*60px的双线边框，边框的空白分别是20px,20px,20px*/
+			border-bottom: 20px solid;
+			margin:60px;
+			cursor: pointer;
+		}
+		/*border-color的默认颜色是color*/
+		.add{
+			position: relative;
+			height: 100px;
+			width: 100px;
+			margin:60px;
+			color: #ccc;
+			transition: color .25s;
+			border:1px solid;
+			cursor: pointer;
+		}
+		.add:before{
+			content: "";
+			display: block;
+			width: 60px;
+			height: 10px;
+			border-color: #ccc;
+			position: absolute;
+			top:50%;
+			left: 50%;
+			margin:-5px 0 0 -30px;
+			border-top:10px solid;
+		}
+		.add:after{
+			content: "";
+			display: block;
+			height: 60px;
+			width: 10px;
+			border-color:#ccc;
+			border-left:10px solid;
+			position: absolute;
+			top:50%;
+			left: 50%;
+			margin:-30px 0 0 -5px;
+		}
+		.add:hover{
+			color:#06c;
+		}
+		.test7{
+			width: 0px;
+			height: 0px;
+			margin:60px;
+			border:50px solid;
+			border-color: red green blue orange;
+		}
+		.test8{
+			width: 50px;
+			height: 50px;
+			margin:60px;
+			border:50px solid;
+			border-color: red green blue orange;
+		}
+		.test9{
+			width: 0px;
+			height: 0px;
+			margin:60px;
+			border:50px solid;
+			border-color:  green green transparent transparent;
+		}
+		/*
+			background-positiond定位元素的局限：只能在相对左上角数值定位，不能相对右下角。
+			将图片相对于右边定位：
+			border-right:50px solid transparent;
+			background-position:100% 40px;
+
+
+			100%右侧定位不见算border区域。
+			
+		*/
+
+		/*border透明边框增加响应区域的大小*/
+		.checkbox{
+			width: 16px;
+			height: 16px;/*如果是这样的话，点击区域太小，用户体验不好*/
+			border:2px solid transparent;/*设置2px的透明边框，整个点击区域的大小变为20px*/
+			box-shadow: inset 0 1px,inset 1px 0,inset -1px 0,inset 0 -1px;
+			background-color:#fff;
+			background-clip: content-box;
+			color: #d0d0d5;
+			margin:60px;
+		}
+
+		/*
+			border实现等高布局。
+			局限：不支持百分比。
+		*/
+
+		.box{
+			margin:60px;
+			border-left:300px solid #222;
+			color: #ccc;
+		}
+		.left{
+			width:300px;
+			margin-left: -300px;
+			float: left;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="test1">thin:1px</div>
+	<div class="test2">medium:3px</div>
+	<div class="test3">thick:5px</div>
+	<div class="test4">style:dashed</div>
+	<div class="test5">style:dotted</div>
+	<div class="test6">style:double</div>
+	<div class="more">点击显示更多</div>
+	<div class="add"></div>
+	<div class="test7"></div>
+	<div class="test8"></div>
+	<div class="test9"></div>
+	<div class="checkbox"></div>
+
+	<!--
+		border在布局方面的应用
+	-->
+	<div class="box">
+		<nav class="left">
+			<h3>导航1</h3>
+			<h3>导航1</h3>
+			<h3>导航1</h3>
+		</nav>
+		<section>
+			<div class="module">模块1</div>
+			<div class="module">模块1</div>
+			<div class="module">模块1</div>
+			<div class="module">模块1</div>
+		</section>
+	</div>
+</body>
+</html>
