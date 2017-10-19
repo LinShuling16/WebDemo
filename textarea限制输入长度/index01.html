@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>textarea01</title>
+</head>
+<body>
+	<script>
+		var textarea_maxlen = {
+			isMax: function(max_length){
+				var textarea = document.getElementById("area");
+				if(textarea.value.length > max_length){
+					textarea.value = textarea.value.substring(0,max_length);
+				}
+			},
+			disabledRightMouse:function(){
+				document.oncontextmenu = function(){
+					return false;
+				}
+			},
+			enabledRightMouse:function(){
+				document.oncontextmenu = null;
+			}
+		}
+	</script>
+	请输入内容：
+	<br><textarea name="" id="area" cols="30" rows="10" onkeyup="textarea_maxlen.isMax(10)" onfocus = "textarea_maxlen.disabledRightMouse()" onblur="textarea_maxlen.enabledRightMouse()"></textarea>
+</body>
+</html>

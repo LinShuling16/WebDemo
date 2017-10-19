@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>divContent</title>
+	<style>
+		.textarea{
+			width: 400px;
+			min-height: 20px;
+			max-height: 300px;
+			_height: 120px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 3px;
+			outline: 0;
+			border: 1px solid #a0b3d6;
+			font-size: 12px;
+			line-height: 24px;
+			padding: 2px;
+			word-wrap: break-word;
+			overflow-x: hidden;
+			overflow-y: auto;
+			border-color: rgba(82, 168, 236, 0.8);
+			box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+			position: relative;
+			user-select: text;
+			-webkit-user-select: text;
+			}
+		.placeholder:before {
+			content: '请输入内容...';
+			line-height: 30px;
+			position: absolute;
+			left: 5px;
+			top: 0;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="textarea placeholder" contenteditable="true" data-placeholder="请输入内容..." data-length="30"><br /></div>
+</body>
+<script>
+	var oInputBox = document.querySelector('.textarea');
+	oInputBox.oninput = oInputBox.onpropertychange = function (ev) {
+		var innterStr = oInputBox.innerText;
+		var _this = this;
+
+	// placeholder
+		if (innterStr.length == 0) {
+			_this.classList.add('placeholder');
+		} else {
+			_this.classList.remove('placeholder');
+		}
+		// maxlength
+	    var len = parseInt(_this.getAttribute('data-length'));
+	    if (innterStr.length > len) {
+	        oInputBox.innerText = innterStr.substring(0,len);
+	    }
+
+	    // div innerText重新赋值之后的光标问题
+
+	    if(navigator.userAgent.indexOf('MSIE') > -1) {
+	        var range = document.selection.createRange();
+	        _this.last = range;
+	        range.moveToElementText(_this);
+	        range.select();
+	        document.selection.empty(); //取消选中
+	    } else {
+	        var range = document.createRange();
+	        range.selectNodeContents(_this);
+	        range.collapse(false);
+	        var sel = window.getSelection();
+	        sel.removeAllRanges();
+	        sel.addRange(range);
+	    }
+	};
+</script>
+</html>

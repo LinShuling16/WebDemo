@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>textarea</title>
+</head>
+<body>
+	<textarea name="" id="textarea1" cols="30" rows="10"></textarea>
+	<button id="button" type="button">输入长度</button>
+	<script>
+	var textarea1 =  document.getElementById("textarea1");
+	var btn = document.getElementById("button");
+	btn.onclick = function (){
+		var value = textarea1.value;
+	    var len = value.length;
+	    if(len > 20){
+	    	alert("20啦。。");
+	    }else{
+	    	alert("还好还好。。");
+	    }
+	}	
+	</script>
+</body>
+</html>

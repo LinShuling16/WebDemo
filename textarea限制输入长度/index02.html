@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>textarea02</title>
+</head>
+<body>
+	<form  name="myform" action="">
+		<textarea name="message" id="" cols="30" rows="10"
+			onkeydown="textCounter(this.form.message,this.form.remLen,100);" onkeyup="textCounter(this.form.message,this.form.remLen,100);" 
+		></textarea>
+		 您还可以输入:<input name="remLen" type="text" value="100" size="3" readonly="readonly">个字符  
+	</form>
+	<script>
+		function textCounter(field,countfield,maxlimit){
+			if(field.value.length > maxlimit){
+				field.value = field.value.substring(0,maxlimit);
+			}else{
+				countfield.value = maxlimit - field.value.length;
+			}
+		}
+	</script>
+</body>
+</html>
