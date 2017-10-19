@@ -8,7 +8,8 @@ some web demo
 - WebSocketChatRoom:使用WebSocket实现一个即时聊天室的功能
 - css_border:深入理解css border
 - 自适应高度输入框：两种方法实现，当输入内容时，输入框高度变化，同时可以限制字数。
-- textarea限制输入长度
+- textarea限制输入长度：
  1. 提交显示提示，超过限制字数
  2. 当超过限制字数时，输入无效
  3. 实时显示剩余可输入字数
+- vue-nicescroll:在vue项目中使用jq的滚动条插件。
