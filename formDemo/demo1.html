@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo1</title>
+	<link rel="stylesheet" href="css/lyz.calendar.css">
+	<link rel="stylesheet" href="css/jquery.searchableSelect.css" >
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="content">
+		<div class="workingDate">
+			<h4 class="mustFill">工时日期</h4>
+			<p class="descriptionMsg">工时产生的实际日期，非填表日期</p>
+			<input class="ipt searchable-select-holder" id="date" placeholder="点击选择日期">
+		</div>
+
+		<div class="personInfor">
+			<h4 class="mustFill">人员信息</h4>
+			<p class="descriptionMsg">需要填写五位工号，如01585</p>
+
+			<div class="person">
+				<ul>
+					<li class="mustFill">工号</li>
+					<li class="mustFill">姓名</li>
+					<li class="mustFill">岗位/角色</li>
+				</ul>
+				<div>
+					<input class="ipt searchable-select-holder" type="text">
+					<input class="ipt searchable-select-holder" type="text">
+					<input class="ipt searchable-select-holder marginR" type="text">
+					<a  class="del" href="javascript:;">删除</a>
+				</div>
+			</div><br>
+			<a  class="add" href="javascript:;">添加记录</a>
+		</div>
+
+		<div class="projectWT">
+			<h4 class="mustFill">项目工时</h4>
+			<p class="promptMsg descriptionMsg" >项目名称只需解决方案部填写，其他部门可忽略此字段</p>
+			<div class="project">
+				<ul>
+					<li class="mustFill">项目编号</li>
+					<li class="mustFill">项目名称</li>
+					<li class="mustFill">工位号</li>
+					<li class="mustFill">部门</li>
+					<li class="mustFill">项目阶段</li>
+					<li class="mustFill">工作内容</li>
+					<li class="mustFill">工作内容详情</li>
+					<li class="mustFill">工时(H)</li>
+					<li class="mustFill">进度</li>
+					<li class="mustFill">计划完成时间</li>
+				</ul>
+
+				<div>
+					<select class="slipt" name="" id="" class="ipt">
+						<option value ="1">test</option>
+						<option value ="1">ab</option>
+			  			<option value ="2">ac</option>
+			  			<option value ="2">d</option>
+					</select>
+					<input class="ptipt searchable-select-holder" type="text">
+					<select class="slipt" name="" id="" class="ipt">
+						<option value ="1">test</option>
+			  			<option value ="2">test</option>
+					</select>
+					<select class="slipt" name="" id="" class="ipt">
+						<option value ="1">test</option>
+			  			<option value ="2">test</option>
+					</select>
+					<select class="slipt" cname="" id="" class="ipt">
+						<option value ="1">test</option>
+			  			<option value ="2">test</option>
+					</select>
+					<select class="slipt" name="" id="" class="ipt">
+						<option value ="1">test</option>
+			  			<option value ="2">test</option>
+					</select>
+					<input class="ptipt searchable-select-holder" type="text">
+					<input class="ptipt searchable-select-holder" type="text">
+					<select class="slipt" name="" id="" class="ipt">
+						<option value ="1">test</option>
+			  			<option value ="2">test</option>
+					</select>
+					<input class="ptipt searchable-select-holder marginR" type="text">
+					<a  class="del" href="javascript:;">删除</a>
+				</div>
+			</div><br>
+			<a  class="add" href="javascript:;">添加记录</a>
+		</div><!--projectWT ending-->
+
+		<div class="workSummary">
+			<h4>今日工作总结(含项目问题及建议)</h4>
+			<p class="promptMsg descriptionMsg">请简要概述</p>
+			<textarea class="enterText searchable-select-holder" name="" id=""></textarea>
+		</div>
+
+		<div class="workPlan">
+			<h4 class="mustFill">明日工作计划</h4>
+			<p class="promptMsg descriptionMsg">请简要概述</p>
+			<textarea class="enterText searchable-select-holder" name="" id=""></textarea>
+		</div>
+
+		<div class="approval">
+			<h4>审批人员</h4>
+			<p class="descriptionMsg">如需默认人以外的人审批，请选择</p>
+			<div class="setUp searchable-select-holder"><a href="javascript:;">点击设置成员</a></div>
+		</div>
+		<div class="submitType">
+			<p class="mustFill">提交原因</p>
+			<input type="radio" name="reason" value="" checked>正常提交
+			<br>
+			<input type="radio" name="reason" value="">驳回后二次提交
+		</div>
+		<a class="submit" href="javascript:;">确认提交</a>
+	</div>
+
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/lyz.calendar.min.js"></script>
+	<script src="js/jquery.searchableSelect.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
