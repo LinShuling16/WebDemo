@@ -14,3 +14,4 @@ some web demo
  3. 实时显示剩余可输入字数
 - vue-nicescroll:在vue项目中使用jq的滚动条插件。
 - formDemo:一个静态的表单页面练习（使用jq日期选择插件和带选择功能的下拉框插件，详见js文件夹）
+- flex布局效果:flex布局demo
