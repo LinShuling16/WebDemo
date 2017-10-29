@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>date03</title>
+	<style>
+		#date{
+			position: absolute;
+			font-size: 30px;
+			font-family: '微软雅黑';
+			top:50%;
+			left:50%;
+			-webkit-transform:translate(-50%,-50%);
+		}
+	</style>
+</head>
+<body>
+	<div id="date">2017.10.29</div>
+	<script>
+		window.onload = function(){
+			showTime();
+
+		}
+		function checkTime(i){
+			return i < 10? "0"+i:i;
+		}
+		function showTime(){
+			var now = new Date();//获取当前时间
+			var timedate = new Date("2017/10/30,24:00:00");//截止时间
+			//getTime() 方法可返回距 1970 年 1 月 1 日之间的毫秒数。
+			var leftTime = (timedate.getTime() - now.getTime())/1000;
+			var d = checkTime(parseInt(leftTime/(24*60*60)));
+			var h = checkTime(parseInt(leftTime/(60*60)%24));
+			var m = checkTime(parseInt(leftTime/60%60));
+			var s = checkTime(parseInt(leftTime%60));
+			var time = d + "天" + h + "小时" + m + "分钟" + s + "秒";
+			document.getElementById('date').innerHTML = time;
+			setTimeout(showTime,500);
+		}
+	</script>
+</body>
+</html>

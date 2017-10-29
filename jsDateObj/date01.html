@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>date01</title>
+	<style>
+		#date{
+			position: absolute;
+			font-size: 30px;
+			font-family: '微软雅黑';
+			top:50%;
+			left:50%;
+			-webkit-transform:translate(-50%,-50%);
+		}
+	</style>
+</head>
+<body>
+	<div id="date">2017.10.29</div>
+	<script>
+		window.onload = function(){
+			showTime();
+		}
+		//checkTime(i)对分钟和秒进行判断，如果小于10，在其前补0.
+		function checkTime(i){
+			return i < 10? "0"+i:i;
+		}
+		function showTime(){
+			var time = new Date();//日期对象
+			console.log("new Date :"+time);
+			var year_1 = time.getYear();//获得年份
+			console.log("getYear(): "+year_1);
+			var year_2 = time.getFullYear();//获得完整年份
+			console.log("getFullYear(): "+year_2);
+			var month = time.getMonth();//获得月份(0~11)
+			console.log("getMonth(): "+month);
+			var date = time.getDate();//获得日期(1~31)
+			console.log("getDate(): "+date);
+			var day = time.getDay();//星期几(0~6)
+			console.log("getDay(): "+day)
+			var hours = time.getHours();//小时(0~23)
+			console.log("getHours(): "+hours);
+			var min = time.getMinutes();//分钟(0~59)
+			console.log("getMinutes(): "+min);
+			var seconds = time.getSeconds();//秒
+			console.log("getSeconds(): "+seconds);
+
+			min = checkTime(min);
+			seconds = checkTime(seconds);
+
+			var weekday = new Array(7);
+			weekday[0] = "星期天"; 
+			weekday[1] = "星期一";
+			weekday[2] = "星期二";
+			weekday[3] = "星期三";
+			weekday[4] = "星期四";
+			weekday[5] = "星期五";
+			weekday[6] = "星期六";
+
+			var str_time = year_2 + "年" + (month+1) + "月" + date + "日" +" "+ weekday[day] +" "+ hours +":" + min +":" + seconds;
+
+			document.getElementById('date').innerHTML = str_time;
+			setTimeout(showTime,500);//每500ms执行一次，实现秒数实时跳动。
+		}	
+		
+	</script>
+</body>
+</html>

@@ -15,3 +15,7 @@ some web demo
 - vue-nicescroll:在vue项目中使用jq的滚动条插件。
 - formDemo:一个静态的表单页面练习（使用jq日期选择插件和带选择功能的下拉框插件，详见js文件夹）
 - flex布局效果:flex布局demo
+- jsDateObj:JavaScript Date 对象应用
+1. date01——获取当前时间
+2. date02——高考倒计时功能
+3. date03——限时抢购功能
