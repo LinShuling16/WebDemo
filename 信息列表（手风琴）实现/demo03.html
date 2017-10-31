@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo03</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		a{
+			text-decoration: none;
+			color:#333;
+		}
+		ul li{
+			list-style: none;
+		}
+		.list{
+			width: 220px;
+			margin: 0 auto;
+			margin-top: 20px;
+			border: 1px solid #ccc;
+		}
+		h3{
+			padding-left:10px;
+			padding-bottom: 2px;
+			background: #ccc;
+		}
+		.list ul li{
+			font-size: 16px;
+			padding:10px;
+			border-bottom: 1px dotted #ccc;
+		}
+		.list ul li span{
+			width: 18px;
+			color:#fff;
+			background: #ccc;
+			font-size: 14px;
+			text-align:center;
+			margin-right: 4px;
+			display: inline-block;	
+		}
+		.list ul li:hover span{
+			background: #ec689c;
+		}
+		.list ul li:hover a{
+			color:#ec6941; 
+		}
+		.list ul li dl{
+			margin-top:10px;
+			font-size: 14px;
+			padding-left:30px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="list">
+		<h3>全球冷读榜</h3>
+		<ul>
+			<li id="test">
+				<span>1</span><a href="javascript:;">完全图解狗的心理</a>
+				<dl>
+					<dt>完全图解狗的心理</dt>
+					<dd>作者：名小狗</dd>
+					<dd>价格：88.66</dd>
+				</dl>
+			</li>
+			<li>
+				<span>2</span><a href="javascript:;">完全图解狗的心理</a>
+				<dl>
+					<dt>完全图解狗的心理</dt>
+					<dd>作者：名小狗</dd>
+					<dd>价格：88.66</dd>
+				</dl>
+			</li>
+			<li>
+				<span>3</span><a href="javascript:;">完全图解狗的心理</a>
+				<dl>
+					<dt>完全图解狗的心理</dt>
+					<dd>作者：名小狗</dd>
+					<dd>价格：88.66</dd>
+				</dl>
+			</li>
+			<li>
+				<span>4</span><a href="javascript:;">完全图解狗的心理</a>
+				<dl>
+					<dt>完全图解狗的心理</dt>
+					<dd>作者：名小狗</dd>
+					<dd>价格：88.66</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+	<script>
+		window.onload = function(){
+			var list = document.getElementsByTagName('li');
+			var dl = document.getElementsByTagName('dl')
+			for(let i=0; i<list.length;i++){
+				list[i].onmouseover = function(){
+					dl[i].style.display = 'block';
+				}
+				list[i].onmouseout = function(){
+					dl[i].style.display = 'none';
+				}
+			}
+		}
+	</script>
+</body>
+</html>
