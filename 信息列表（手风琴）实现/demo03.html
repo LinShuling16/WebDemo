@@ -92,19 +92,18 @@
 			</li>
 		</ul>
 	</div>
+	<script src="js/jquery.min.js"></script>
 	<script>
-		window.onload = function(){
-			var list = document.getElementsByTagName('li');
-			var dl = document.getElementsByTagName('dl')
-			for(let i=0; i<list.length;i++){
-				list[i].onmouseover = function(){
-					dl[i].style.display = 'block';
-				}
-				list[i].onmouseout = function(){
-					dl[i].style.display = 'none';
-				}
-			}
-		}
+		$(function(){
+			$('li').mousemove(function(){
+				$(this).children('dl').css('display','block');
+				$(this).children('span').addClass('on');//增加样式
+			})
+			$('li').mouseout(function(){
+				$(this).children('dl').css('display','none');
+				$(this).children('span').removeClass('on');//移除样式
+			})
+		})
 	</script>
 </body>
 </html>
