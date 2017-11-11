@@ -20,3 +20,4 @@ some web demo
 2. date02——高考倒计时功能
 3. date03——限时抢购功能
 - 信息列表（手风琴）实现:三种实现方式
+- isPCOrMb:JS判断是PC端or移动端访问页面
