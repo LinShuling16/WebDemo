@@ -1,0 +1,15 @@
+/*
+* @Author: linshuling
+* @Date:   2018-01-17 15:37:48
+* @Last Modified by:   linshuling
+* @Last Modified time: 2018-01-17 15:41:57
+*/
+*{
+    margin:0;
+    padding: 0;
+}
+.item label{
+  display: inline-block;
+  width: 60px;
+  text-align:right;
+}
