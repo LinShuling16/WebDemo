@@ -1,0 +1,16 @@
+/*
+* @Author: linshuling
+* @Date:   2018-02-01 11:31:26
+* @Last Modified by:   linshuling
+* @Last Modified time: 2018-02-01 15:05:43
+*/
+*{margin:0; padding:0;}
+a{text-decoration: none; color:blue;}
+.fs20ClorRed{font-size: 20px; color: red;}
+.w200{width:200px;}
+.enter{margin:0 auto;}
+.mt100mb100{margin-top: 100px; margin-bottom: 100px;}
+.bg1{background-color: #f2debd;}
+.bg2{background-color: #aa5b71;}
+.bg3{background-color: #e7dac9;}
+.bg4{background-color: #b8f1cc;}
