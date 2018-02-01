@@ -23,3 +23,4 @@ some web demo
 - isPCOrMb:JS判断是PC端or移动端访问页面
 - localstorage_test:localstorage缓存测试(再次进入页面，表单字段填充上次离开时填写的内容(未提交))https://www.cnblogs.com/st-leslie/p/5617130.html
 - cookie_test:cookie使用测试。
+- 浏览器返回缓存问题——主要是浏览器中的回退键
