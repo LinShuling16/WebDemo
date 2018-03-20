@@ -1,0 +1,29 @@
+/*
+* @Author: linshuling
+* @Date:   2018-03-20 11:04:23
+* @Last Modified by:   linshuling
+* @Last Modified time: 2018-03-20 11:12:02
+*/
+* {
+    margin:0; 
+    padding:0;
+}
+table,td{
+    border:1px solid #CC6600;
+    border-collapse:collapse;
+    font-size:12px;
+}
+#divResult{ 
+    border:1px solid #CC6600; 
+    font-size:14px; 
+    letter-spacing : 2px;
+    margin-top:20px; 
+    float:left; 
+    padding:8px 5px;
+}
+#txtChinese {
+    padding:2px;
+}
+.wrapper {
+    padding:20px;
+}
