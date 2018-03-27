@@ -25,3 +25,4 @@ some web demo
 - cookie_test:cookie使用测试。
 - 浏览器返回缓存问题——主要是浏览器中的回退键。
 - searchTest:通过汉字搜索拼音及首字母。
+- unslider：jq插件unslider使用。
