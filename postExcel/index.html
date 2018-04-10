@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <button class="btn">生成文件</button>
+    </div>
+    <script src="./jquery.min.js"></script>
+    <script>
+       var page = {
+            data : {
+                serverHost : 'http://10.10.0.114:8080/'
+            },
+            init : function(){
+                this.bindEvent();
+            },
+            bindEvent : function(){
+                var _this = this;
+                var json = {
+                    code:"200",
+                    data:{
+                    BJD_MATERIAL:[
+                        { 
+                            BJD_UNIT_PRICE:"6元/斤",
+                            BJD_MATERIAL_CODE:"酒店公司",
+                            BJD_PM_FORMAT:"XJD521",
+                            BJD_JQDATE:"2018-05-08",
+                            BJD_MONEY:"499元",
+                            BJD_NUMBER:"25"
+                        },
+                        { 
+                            BJD_UNIT_PRICE:"6元/斤",
+                            BJD_MATERIAL_CODE:"酒店公司",
+                            BJD_PM_FORMAT:"XJD521",
+                            BJD_JQDATE:"2018-05-08",
+                            BJD_MONEY:"499元",
+                            BJD_NUMBER:"25"
+                        },
+                    ],
+                    BJD_TAX_RATE:"6",
+                    BJD_INQUIRY_NUMBER:"XJD499",
+                    BJD_PAY_WAY:"付款方式",
+                    BJD_COMPANY_NAME:"总公司"},
+                    state:"success"
+                };
+                //点击生成文件
+                $(document).on('click','.btn', function(){
+                    $.ajax({
+                        type     : 'post',
+                        url      : 'http://10.10.0.114:8080/WorkStat/workstat/import_excel_3',
+                        dataType : 'text',
+                        data     : {
+                            json : JSON.stringify(json)
+                        },
+                        success  : function(res){
+                            var fileUrl     = res.replace(/\\/g, '\/'),
+                               downloadUrl = _this.data.serverHost + 'WorkStat/BJD/excel_3?path=' + fileUrl,
+                               //生成下载链接
+                               temp        = '<a href="' + downloadUrl +'">下载</a>';
+                            $('.content').append(temp);
+                            console.log(downloadUrl);       
+                        },
+                        error   : function(err){
+                            console.log(err);
+                        }
+
+                    })
+                });
+            }
+       } 
+       $(function(){
+            page.init();
+       })
+    </script>
+</body>
+</html>

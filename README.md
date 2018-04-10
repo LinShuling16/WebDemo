@@ -26,3 +26,4 @@ some web demo
 - 浏览器返回缓存问题——主要是浏览器中的回退键。
 - searchTest:通过汉字搜索拼音及首字母。
 - unslider：jq插件unslider使用。
+- postExcel: post发送数据在服务器生成文件，返回服务器文件地址，在客户端生成可下载链接。
