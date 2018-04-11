@@ -27,3 +27,4 @@ some web demo
 - searchTest:通过汉字搜索拼音及首字母。
 - unslider：jq插件unslider使用。
 - postExcel: post发送数据在服务器生成文件，返回服务器文件地址，在客户端生成可下载链接。
+- dingding扫码登录:钉钉扫码登录demo
