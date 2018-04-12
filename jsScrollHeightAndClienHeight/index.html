@@ -7,8 +7,32 @@
 </head>
 <body>
     <div class="content">
-        <textarea class='text_1'></textarea>
+        <textarea class='text_1'></textarea><br>
+        <button class="btn">click</button>
     </div>
-    
+    <script>
+        var page = {
+            init : function(){
+                this.bindEvent();
+            },
+            $id : function(idName){
+                return document.getElementById(idName);
+            },
+            $class : function(className){
+                return document.getElementsByClassName(className)[0];
+            },
+            bindEvent : function(){
+                var _this = this;
+                _this.$class('btn').onclick = function(){
+                    var clienH  = _this.$class('text_1').clientHeight;
+                    var scrollH = _this.$class('text_1').scrollHeight;
+                    alert('clienH: ' + clienH);
+                    alert('scrollH: ' + scrollH);
+                }
+
+            }
+        }
+        window.onload = page.init();
+    </script> 
 </body>
 </html>
