@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+    <p>Element.scrollHeight 这个只读属性是一个元素内容高度的度量，包括由于溢出导致的视图中不可见内容。没有垂直滚动条的情况下，scrollHeight值与元素视图填充所有内容所需要的最小值clientHeight相同。包括元素的padding，但不包括元素的border和margin。scrollHeight也包括 ::before 和 ::after这样的伪元素</p>
+    <h4>判定元素是否滚动到底:element.scrollHeight - element.scrollTop === element.clientHeight</h4>
+    <h4>监听onscroll事件，这个等式可以用来判定用户是否阅读过文本。（参考 element.scrollTop 和 element.clientHeight属性）。</h4>
     <div class="content">
         <textarea class='text_1'></textarea><br>
         <button class="btn">click</button>

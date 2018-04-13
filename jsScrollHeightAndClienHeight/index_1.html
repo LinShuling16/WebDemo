@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        .tobeRead{
+            display: block;
+            width: 600px;
+            height: 120px;
+            border:2px solid #2A9F00;
+            border-radius:5px;
+            margin-bottom:16px;
+            resize:none;
+        }
+        .noticeBox{
+            display: block;
+            width: 590px;
+            padding: 5px;
+            border: 2px solid #7FDF55;
+            margin-bottom:16px;
+            border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+    <form name="registration">
+        <textarea class="tobeRead" disabled>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna. 
+            Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus 
+            neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at 
+            velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus 
+            ut quam lacus, sed ultricies diam. Vestibulum convallis rutrum dolor, sit amet egestas velit scelerisque id. 
+            Proin non dignissim nisl. Sed mi odio, ullamcorper eget mattis id, malesuada vitae libero. Integer dolor lorem, 
+            mattis sed dapibus a, faucibus id metus. Duis iaculis dictum pulvinar. In nisi nibh, dapibus ac blandit at, porta 
+            at arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent 
+            dictum ipsum aliquet erat eleifend sit amet sollicitudin felis tempus. Aliquam congue cursus venenatis. Maecenas 
+            luctus pellentesque placerat. Mauris nisl odio, condimentum sed fringilla a, consectetur id ligula. Praesent sem 
+            sem, aliquet non faucibus vitae, iaculis nec elit. Nullam volutpat, lectus et blandit bibendum, nulla lorem congue 
+            turpis, ac pretium tortor sem ut nibh. Donec vel mi in ligula hendrerit sagittis. Donec faucibus viverra fermentum. 
+            Fusce in arcu arcu. Nullam at dignissim massa. Cras nibh est, pretium sit amet faucibus eget, sollicitudin in 
+            ligula. Vivamus vitae urna mauris, eget euismod nunc. Aenean semper gravida enim non feugiat. In hac habitasse 
+            platea dictumst. Cras eleifend nisl volutpat ante condimentum convallis. Donec varius dolor malesuada erat 
+            consequat congue. Donec eu lacus ut sapien venenatis tincidunt. Quisque sit amet tellus et enim bibendum varius et 
+            a orci. Donec aliquet volutpat scelerisque. Proin et tortor dolor. Ut aliquet, dolor a mattis sodales, odio diam 
+            pulvinar sem, egestas pretium magna eros vitae felis. Nam vitae magna lectus, et ornare elit. Morbi feugiat, ipsum 
+            ac mattis congue, quam neque mollis tortor, nec mollis nisl dolor a tortor. Maecenas varius est sit amet elit 
+            interdum quis placerat metus posuere. Duis malesuada justo a diam vestibulum vel aliquam nisi ornare. Integer 
+            laoreet nisi a odio ornare non congue turpis eleifend. Cum sociis natoque penatibus et magnis dis parturient montes, 
+            nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci fermentum.
+        </textarea>
+        <input type="checkbox" name="accept">
+        <label for="accept">同意</label>
+        <input type="button" value="下一步" id="nextStep">
+    </form>
+    <h4>关于表单的name属性，document.name获取相应的表单，详细看js中formTest()</h4>
+    <form name="formTest">
+        <input type="text" name="formTest_input">
+    </form>
+    <script>
+        var page = {
+            data : {
+                read: false
+            },
+            $class : function(className){
+                return document.getElementsByClassName(className)[0];
+            },
+            $id : function(idName){
+                return document.getElementById(idName);
+            },
+            init : function(){
+                var tobeRead = this.$class('tobeRead');
+                /*
+                    在isRead作用域下创建一个提示框：noticeBox
+                */
+                isRead.noticeBox = document.createElement("span");
+                document.registration.accept.checked = false;//registration.accept表单的name属性。
+                isRead.noticeBox.setAttribute('class', 'noticeBox');
+
+                //插入noticeBox提示框
+                tobeRead.parentNode.insertBefore(isRead.noticeBox, tobeRead);
+                //监听滚动事件
+                tobeRead.onscroll = isRead;
+                //使用call更改isRead内部this指向，使其指向tobeRead对象。
+                isRead.call(tobeRead);
+
+                function isRead(){
+                    //用户已阅读过，不再监听。
+                    if(isRead.read){
+                        return;
+                    }
+                    /*
+                        判定元素是否滚动到底:element.scrollHeight - element.scrollTop === element.clientHeight
+                    */
+                    isRead.read = (this.scrollHeight - this.scrollTop === this.clientHeight) ? true : false;
+                    document.registration.accept.disabled = document.getElementById('nextStep').disabled = !isRead.read;   
+                    isRead.noticeBox.innerHTML = isRead.read ? "谢谢！" : "请仔细阅读以下全文。";
+                }
+                this.formTest();      
+            },
+            formTest : function(){
+                document.formTest.formTest_input.value = "测试";
+                console.log(typeof document.formTest);//object
+                console.log(document.formTest);
+                console.log(document.formTest.formTest_input);
+            },
+        }
+        window.onload = page.init();
+    </script>
+</body>
+</html>
