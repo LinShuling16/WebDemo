@@ -1,0 +1,32 @@
+/*
+* @Author: linshuling
+* @Date:   2018-05-05 14:04:18
+* @Last Modified by:   linshuling
+* @Last Modified time: 2018-05-05 15:30:35
+*/
+
+/* 
+    希望实现的是顶部定位的水平导航效果，
+    则修改.title-nav-ul和.title-nav-li这两个类名的样式即可，
+    分别表示导航容器和导航列表。 
+*/
+.title-nav-ul {
+    width: 200px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.25);
+    position: absolute;
+    top: 200px; right: 10px;
+}
+.title-nav-li {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+.title-nav-li.active {
+    font-weight: bold;
+}
+.title-nav-li:hover {
+    background-color: #f0f0f0;
+}
