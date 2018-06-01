@@ -1,0 +1,15 @@
+/*
+* @Author: linshuling
+* @Date:   2018-06-01 09:29:43
+* @Last Modified by:   linshuling
+* @Last Modified time: 2018-06-01 09:45:06
+*/
+*{
+   margin:0;
+   padding: 0;
+}
+canvas{
+    display: block;
+    margin: 100px auto;
+    background-color: #eee;
+}
