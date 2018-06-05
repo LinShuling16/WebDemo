@@ -76,7 +76,9 @@
             }
         },
         drawTangram : function(context, data){
+            //绘制路径
             context.beginPath();
+            
             context.moveTo(data.p[0].x, data.p[0].y);
             for(var i=1; i<data.p.length; i++){
                 context.lineTo(data.p[i].x, data.p[i].y);
