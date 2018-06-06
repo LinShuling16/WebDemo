@@ -31,3 +31,4 @@ some web demo
 - titleNav:张老师-文章文档标题自动生成导航jQuery小插件titleNav.js使用demo。
 - jsScrollHeightAndClienHeight:元素的scrollHeight属性和clientHeight属性。
 - H5_canvas实现绚丽倒计时效果：彩色小球倒计时动画效果。
+- vue_twitter:待完成。。。。。
