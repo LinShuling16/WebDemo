@@ -2,7 +2,7 @@
 * @Author: linshuling
 * @Date:   2018-06-01 09:29:22
 * @Last Modified by:   linshuling
-* @Last Modified time: 2018-06-06 09:12:35
+* @Last Modified time: 2018-06-06 09:39:21
 */
 var page = {
     //全局参数设置
@@ -100,9 +100,11 @@ var page = {
             }
 
             _this.data.curShowTimeSeconds = nextShowTimeSeconds;
-        }
+            
 
+        }
         _this.updataBalls();
+        
 
     },
     //当前时间到截止时间有多少秒
