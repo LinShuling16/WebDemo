@@ -2,7 +2,7 @@
 * @Author: linshuling
 * @Date:   2018-06-01 09:29:22
 * @Last Modified by:   linshuling
-* @Last Modified time: 2018-06-05 17:46:19
+* @Last Modified time: 2018-06-06 09:12:35
 */
 var page = {
     //全局参数设置
@@ -19,7 +19,7 @@ var page = {
         MARGIN_TOP  : 60,
 
         //设置一个截止时间
-        endTime : new Date(2018,5,5,18,45,00),
+        endTime : new Date(2018,5,6,12,15,00),
 
         //当前时间
         curShowTimeSeconds : 0,
@@ -27,8 +27,7 @@ var page = {
         //运动的小球
         balls : [],
         //小球的颜色
-        colors : ['#33b5e5', '#0099cc', '#aa66cc', '#9933cc','#99cc00','#669900','#ffbb33', '#ff8800','#ff4444','#cc00cc'],
-
+        colors : ['#33b5e5', '#0099cc', '#aa66cc', '#9933cc','#99cc00','#669900','#ffbb33', '#ff8800','#ff4444','#cc00cc']
 
     },
     init : function(){
@@ -53,7 +52,7 @@ var page = {
                 }
             ,50);
         }else{
-            alert('您的浏览器不支持canvas')
+            alert('您的浏览器不支持canvas');
         }
     },
     //时间更新
@@ -181,11 +180,11 @@ var page = {
                 if(digit[num][i][j] === 1){
                     var aBall = {
                         x : x+j*2*(RADIUS+1)+(RADIUS+1),
-                        y : y+j*2*(RADIUS+1)+(RADIUS+1),
+                        y : y+i*2*(RADIUS+1)+(RADIUS+1),
                         g : 1.5 + Math.random(),
                         vx: Math.pow(-1, Math.ceil(Math.random()*1000))*4,
                         vy: -5,
-                        color: colors[Math.random()*colors.length]
+                        color: colors[Math.random()*colors.length<<0]
                     }
 
                     _this.data.balls.push(aBall);
