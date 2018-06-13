@@ -2,9 +2,13 @@
 * @Author: linshuling
 * @Date:   2018-06-12 15:14:43
 * @Last Modified by:   linshuling
-* @Last Modified time: 2018-06-12 16:51:36
+* @Last Modified time: 2018-06-13 10:26:14
 */
 // let exec = require("child_process").exec;
+
+let querystring = require("querystring");
+let fs = require("fs");
+let formidable = require("formidable");
 
 let start = (res,postData) =>{
     console.log("request handler 'start' was called.");
@@ -13,50 +17,53 @@ let start = (res,postData) =>{
         <!DOCTYPE html>
         <html lang="en">
         <head>
-            <meta charset="UTF-8">
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
             <title>nodeProDemo</title>
         </head>
         <body>
-            <form action="/upload" method="post">
-                <textarea name="text" cols="60" rows="20"></textarea>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="upload"  multiple="multiple">
                 <br>
-                <input type="submit" value="submit text">
+                <input type="submit" value="Upload file">
             </form>
         </body>
         </html>
     `;
-    // let body = '<!DOCTYPE html>'+
-    //             '<html lang="en">'+
-    //             '<head>'+
-    //                 '<meta charset="UTF-8">'+
-    //                 '<title>nodeProDemo</title>'+
-    //             '</head>'+
-    //             '<body>'+
-    //                 '<form action="/upload" method="post">'+
-    //                     '<textarea name="text" cols="60" rows="20"></textarea>'+
-    //                     '<input type="submit" value="submit text">'+
-    //                 '</form>'+
-    //             '</body>'+
-    //             '</html>';
     res.writeHead(200,{"Content-Type" : "text/html"});
     res.write(body);
     res.end();
 
-    // exec("find", 
-    //     {timeout:1000, maxBuffer:2000*1024},
-    //     (error, stdout, stderr)=>{
-    //     res.writeHead(200,{"Content-Type" : "text/plain"});
-    //     res.write(stdout);
-    //     res.end();
-    // })
 }
 
-let upload = (res, postData) => {
+let upload = (res, req) => {
     console.log("request handler 'upload' was called.");
-    res.writeHead(200,{"Content-Type" : "text/plain"});
-    res.write("You've sent:" + postData);
-    res.end();
+
+    let form = new formidable.IncomingForm();
+    console.log("about to parse");
+    form.parse(req, (error, fields, files) =>{
+        console.log("parsing done");
+        fs.renameSync(files.upload.path, "./tmp/test.jpg");
+        res.writeHead(200,{"Content-Type":"text/html"});
+        res.write("received image:<br>");
+        res.write("<img src='/show'/>");
+        res.end();
+    });
 }
 
+let show = (res) =>{
+    console.log("Request handler 'show' was called");
+    fs.readFile("./tmp/test.jpg", "binary", (error, file)=>{
+        if(error){
+            res.writeHead(500,{"Content-Type":"text/plain"});
+            res.write(error + "\n");
+            res.end();
+        }else{
+            res.writeHead(200,{"Content-Type" : "image/jpg"});
+            res.write(file, "binary");
+            res.end();
+        }
+    });
+}
 exports.start = start;
 exports.upload = upload;
+exports.show = show;

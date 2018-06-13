@@ -2,7 +2,7 @@
 * @Author: linshuling
 * @Date:   2018-06-12 13:57:34
 * @Last Modified by:   linshuling
-* @Last Modified time: 2018-06-12 16:58:05
+* @Last Modified time: 2018-06-13 10:06:18
 */
 
 /*
@@ -37,25 +37,26 @@ let url  = require('url');
     使用 response.write() 函数在HTTP相应主体中发送文本“Hello"。
 */
 
-function start(route, handle, postData){
+function start(route, handle){
     http.createServer( (req,res) => {
         console.log("Request received.");
 
-        let psotData = "";
+        // let postData = "";
         let pathname = url.parse(req.url).pathname;
         console.log("Request for " + pathname + " received.");
 
-        req.setEncoding("utf8");
+        // req.setEncoding("utf8");
 
-        req.addListener("data", (postDataChunk)=>{
-            postData += postDataChunk;
-            console.log("Received POST data chunk '" + postDataChunk + "'.");
-        })
+        // req.addListener("data", (postDataChunk)=>{
+        //     postData += postDataChunk;
+        //     console.log("Received POST data chunk " + postDataChunk + ".");
+        // })
 
-        req.addListener("end", ()=>{
-            route(handle, pathname, res, postData);
-        })
-
+        // req.addListener("end", ()=>{
+        //     route(handle, pathname, res, postData);
+        // })
+        
+        route(handle, pathname, res, req);
 
     }).listen(8888);
 
