@@ -1,0 +1,42 @@
+{
+    "goodsList" : [
+        {
+            "store" : "凯兴商城",//店铺名称
+            "storeHref" : "http://baidu.com",//店铺地址
+            "goods" : [
+                {
+                    "id" : "", //商品id
+                    "cartId" : "", //商品cartId
+                    "ck": "商品库存",//商品库存
+                    "title" : "",//商品标题
+                    "src"   : "",//商品图片地址
+                    "href"  : "",//商品链接地址
+                    "pricestr" : "",//金额标记
+                    "price"    : "60",//商品单价
+                    "length"   : "3",//商品数量
+                    "type"     : "",//商品已选的属性 name : value
+                    "numberName" : "",//商品数量提交name,如果没有这个字段，则不可编辑
+                    "goodsName"  : "",//商品id提交name
+                    "updateNumberUrl" : "",//更新数量地址
+                    "deleteCartUrl"   : ""//删除地址
+
+                }
+            ]
+        }
+    ]
+}
+
+/*
+    功能要点：
+    1.它的url：.....shopCart.html?cartIds = cartId,cartId,cartId,cartId
+    2.实现每家店铺购物车商品的单选及全选功能。
+    3.整个购物车的单选及全选功能。
+    4.购物车编辑：
+        (1)商品数量加减。
+        (2)直接编辑商品数据功能。
+        (3)库存不足提示功能。
+        (4)购物车商品数量至少为1。
+        (5)购物车删除商品功能。
+    5.金额格式化。
+    6.商品金额总计。
+ */

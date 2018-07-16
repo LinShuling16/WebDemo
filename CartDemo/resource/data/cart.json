@@ -1,0 +1,123 @@
+{
+  "status":1,
+  "result":{
+    "totalMoney":109,
+    "goodsList" : [
+        {
+            "store" : "凯兴商城",
+            "storeHref" : "http://baidu.com",
+            "goods" : [
+                {
+                    "id" : "001", 
+                    "cartId" : "01",
+                    "ck": "4",
+                    "title" : "OSA欧莎2018夏装新款女装 时尚个性V领撞色衣袖雪纺衫 白色(预售7月10日发货)",
+                    "src"   : "./img/goods.png",
+                    "href"  : "http://baidu.com",
+                    "pricestr" : "¥",
+                    "price"    : "60",
+                    "length"   : "3",
+                    "type"     : "颜色分类:白色;尺寸S;",
+                    "numberName" : "",
+                    "goodsName"  : "",
+                    "updateNumberUrl" : "",
+                    "deleteCartUrl"   : ""
+
+                },
+                {
+                    "id" : "002", 
+                    "cartId" : "01",
+                    "ck": "8",
+                    "title" : "OSA欧莎2018夏装新款女装 时尚个性V领撞色衣袖雪纺衫 白色(预售7月10日发货)",
+                    "src"   : "./img/goods.png",
+                    "href"  : "http://baidu.com",
+                    "pricestr" : "¥",
+                    "price"    : "60",
+                    "length"   : "3",
+                    "type"     : "颜色分类:白色;尺寸S;",
+                    "numberName" : "",
+                    "goodsName"  : "",
+                    "updateNumberUrl" : "",
+                    "deleteCartUrl"   : ""
+
+                },
+                {
+                    "id" : "003", 
+                    "cartId" : "01",
+                    "ck": "2",
+                    "title" : "OSA欧莎2018夏装新款女装 时尚个性V领撞色衣袖雪纺衫 白色(预售7月10日发货)",
+                    "src"   : "./img/goods.png",
+                    "href"  : "http://baidu.com",
+                    "pricestr" : "¥",
+                    "price"    : "60",
+                    "length"   : "3",
+                    "type"     : "颜色分类:白色;尺寸S;",
+                    "numberName" : "",
+                    "goodsName"  : "",
+                    "updateNumberUrl" : "",
+                    "deleteCartUrl"   : ""
+
+                }
+            ]
+        },
+        {
+            "store" : "真维斯官方旗舰店",
+            "storeHref" : "http://baidu.com",
+            "goods" : [
+                {
+                    "id" : "004", 
+                    "cartId" : "02",
+                    "ck": "4",
+                    "title" : "OSA欧莎2018夏装新款女装 时尚个性V领撞色衣袖雪纺衫 白色(预售7月10日发货)",
+                    "src"   : "./img/goods.png",
+                    "href"  : "http://baidu.com",
+                    "pricestr" : "¥",
+                    "price"    : "60",
+                    "length"   : "3",
+                    "type"     : "颜色分类:白色;尺寸S;",
+                    "numberName" : "",
+                    "goodsName"  : "",
+                    "updateNumberUrl" : "",
+                    "deleteCartUrl"   : ""
+
+                },
+                {
+                    "id" : "005", 
+                    "cartId" : "02",
+                    "ck": "8",
+                    "title" : "OSA欧莎2018夏装新款女装 时尚个性V领撞色衣袖雪纺衫 白色(预售7月10日发货)",
+                    "src"   : "./img/goods.png",
+                    "href"  : "http://baidu.com",
+                    "pricestr" : "¥",
+                    "price"    : "60",
+                    "length"   : "3",
+                    "type"     : "颜色分类:白色;尺寸S;",
+                    "numberName" : "",
+                    "goodsName"  : "",
+                    "updateNumberUrl" : "",
+                    "deleteCartUrl"   : ""
+
+                },
+                {
+                    "id" : "006", 
+                    "cartId" : "02",
+                    "ck": "2",
+                    "title" : "OSA欧莎2018夏装新款女装 时尚个性V领撞色衣袖雪纺衫 白色(预售7月10日发货)",
+                    "src"   : "./img/goods.png",
+                    "href"  : "http://baidu.com",
+                    "pricestr" : "¥",
+                    "price"    : "60",
+                    "length"   : "3",
+                    "type"     : "颜色分类:白色;尺寸S;",
+                    "numberName" : "",
+                    "goodsName"  : "",
+                    "updateNumberUrl" : "",
+                    "deleteCartUrl"   : ""
+
+                }
+            ]
+        }
+    ]
+  },
+  "message":""
+}

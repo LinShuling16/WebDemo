@@ -2,7 +2,7 @@
 * @Author: linshuling
 * @Date:   2018-06-01 09:29:22
 * @Last Modified by:   linshuling
-* @Last Modified time: 2018-06-07 16:08:02
+* @Last Modified time: 2018-07-13 17:32:57
 */
 var page = {
     //全局参数设置
@@ -19,7 +19,7 @@ var page = {
         MARGIN_TOP  : 60,
 
         //设置一个截止时间
-        endTime : new Date(2018,5,7,17,45,00),
+        endTime : new Date(2018,6,13,17,00,00),
 
         //当前时间
         curShowTimeSeconds : 0,
@@ -188,7 +188,6 @@ var page = {
                         vy: -5,
                         color: colors[Math.random()*colors.length<<0]
                     }
-
                     _this.data.balls.push(aBall);
                 }
             }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>char</title> 
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <style>
+        .container{
+            padding-bottom:60px;
+            padding-top:48px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="javascipt:" class="goBack"><img src="../img/icon-left.png" alt=""></a>
+        <span class="headerTitle">购物车</span>
+    </header>
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>  
+            <symbol id="icon-ok" viewBox="0 0 32 32">
+              <title>ok</title>
+              <path class="path1"
+                    d="M31.020 0.438c-0.512-0.363-1.135-0.507-1.757-0.406s-1.166 0.435-1.529 0.937l-17.965 24.679-5.753-5.67c-0.445-0.438-1.035-0.679-1.664-0.679s-1.219 0.241-1.664 0.679c-0.917 0.904-0.917 2.375 0 3.279l7.712 7.6c0.438 0.432 1.045 0.681 1.665 0.681l0.195-0.008c0.688-0.057 1.314-0.406 1.717-0.959l19.582-26.9c0.754-1.038 0.512-2.488-0.538-3.233z"></path>
+            </symbol>
+        </defs>
+    </svg>    
+    <div class="container">
+        <div class="cart-item">
+            <div class="cart-item-head">
+                <div class="cart-item-check">
+                    <a href="javascipt:;" class="checkbox-btn item-check-btn checked">
+                        <svg class="icon icon-ok">
+                            <use xlink:href="#icon-ok"></use>
+                        </svg>
+                    </a>
+                </div>
+                <span class="icon-store"><img src="../img/icon-store.png" alt=""></span>
+                <span class="storeName">真维斯官方旗舰店</span>
+                <a href="javascipt:" class="editCartItem">编辑</a>
+            </div>
+            <ul class="cart-item-list">
+                <li class="">
+                    <div class="cart-tab">
+                        <div class="cart-item-check">
+                           <a href="javascipt:;" class="checkbox-btn item-check-btn checked">
+                                <svg class="icon icon-ok">
+                                    <use xlink:href="#icon-ok"></use>
+                                </svg>
+                           </a>
+                        </div>
+                        <div class="cart-item-pic">
+                            <img src="../img/goods.png">
+                        </div>
+                        <div class="cart-item-del">删除</div>    
+                        <div class="cart-item-descr">
+                            <p class="cart-item-title">OSA欧莎2018夏装新款女装 时尚个性V领撞色衣袖雪纺衫 白色(预售7月10日发货)</p>
+                            <div class="hide">
+                                <p class="cart-item-type">颜色分类:白色;尺寸S;</p>
+                                <p class="cart-item-price">$999.00</p>
+                                <p class="cart-item-length">X3</p>   
+                            </div>
+                            <div class="cart-item-edit">
+                                <a href="javascipt:" class="inB subGoods">-</a>
+                                <a href="javascipt:" class="inB addGoods">+</a>
+                                <input type="number" class="inB inputGoodsLength" value="8">  
+                            </div>
+                        </div> 
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+   <footer class="footer">
+        <div class="cart-item-check">
+           <a href="javascipt:" class="checkbox-btn item-check-btn">
+                <svg class="icon icon-ok">
+                    <use xlink:href="#icon-ok"></use>
+                </svg>
+           </a>
+        </div>
+        <span>全选</span>
+        <div class="checkout noCheckout">结算(2)</div>
+
+        <div class="price-descr">
+            <p>合计：<span class="total-price">￥888.00</span>不含运费</p>
+        </div>
+   </footer>
+</body>
+</html>

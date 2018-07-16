@@ -33,3 +33,4 @@ some web demo
 - H5_canvas实现绚丽倒计时效果：彩色小球倒计时动画效果。
 - vue_twitter:待完成。。。。。
 - nodeProDemo:node搭建服务器实现图片上传并展示：https://www.nodebeginner.org/index-zh-cn.html#whats-needed-to-route-requests
+- CartDemo:vue实现手机购物车页面。
